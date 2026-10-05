@@ -215,6 +215,70 @@ st.markdown(
         font-size: 13px;
     }
 
+    /* =====================================================
+       MAIN CONTENT TEXT VISIBILITY FIX
+       ===================================================== */
+
+    div[data-testid="stAppViewContainer"] {
+        color: #334155 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] h1,
+    div[data-testid="stAppViewContainer"] h2,
+    div[data-testid="stAppViewContainer"] h3,
+    div[data-testid="stAppViewContainer"] h4,
+    div[data-testid="stAppViewContainer"] h5,
+    div[data-testid="stAppViewContainer"] h6 {
+        color: #0f172a !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] p,
+    div[data-testid="stAppViewContainer"] li,
+    div[data-testid="stAppViewContainer"] label {
+        color: #334155 !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] {
+        color: #334155 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] p,
+    div[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] li,
+    div[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] strong,
+    div[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] em {
+        color: #334155 !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"],
+    div[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p,
+    div[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] label {
+        color: #334155 !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] input,
+    div[data-testid="stAppViewContainer"] textarea {
+        color: #f8fafc !important;
+        -webkit-text-fill-color: #f8fafc !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] [data-baseweb="select"] * {
+        color: #f8fafc !important;
+    }
+
+    div[data-testid="stAppViewContainer"] button {
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+
+    div[data-testid="stAppViewContainer"] [data-testid="stAlert"] * {
+        opacity: 1 !important;
+    }
+
     </style>
     """,
     unsafe_allow_html=True
