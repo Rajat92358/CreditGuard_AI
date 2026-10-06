@@ -39,58 +39,315 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stApp { background: #f4f7fb; }
+
+    /* =====================================================
+       CREDITGUARD AI - PROFESSIONAL UI
+       ===================================================== */
+
+    .stApp {
+        background: #f4f7fb;
+    }
+
     section[data-testid="stSidebar"] {
         background: linear-gradient(180deg,#081a3a 0%,#0f2f67 100%);
     }
-    section[data-testid="stSidebar"] * { color:#f8fafc; }
-    .block-container { max-width:1450px; padding-top:1.5rem; padding-bottom:3rem; }
 
-    h1 { color:#0b1f44; font-weight:850; }
-    h2 { color:#102a56; font-weight:800; }
-    h3 { color:#173f7a; font-weight:750; }
+    section[data-testid="stSidebar"] * {
+        color: #f8fafc;
+    }
+
+    .block-container {
+        max-width: 1450px;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    /* =====================================================
+       MAIN PAGE TEXT - DARK AND READABLE
+       ===================================================== */
+
+    section[data-testid="stMain"] {
+        color: #334155 !important;
+    }
+
+    section[data-testid="stMain"] h1 {
+        color: #0b1f44 !important;
+        font-weight: 850;
+    }
+
+    section[data-testid="stMain"] h2 {
+        color: #102a56 !important;
+        font-weight: 800;
+    }
+
+    section[data-testid="stMain"] h3 {
+        color: #173f7a !important;
+        font-weight: 750;
+    }
+
+    section[data-testid="stMain"] h4,
+    section[data-testid="stMain"] h5,
+    section[data-testid="stMain"] h6 {
+        color: #173f7a !important;
+    }
+
+    section[data-testid="stMain"] p,
+    section[data-testid="stMain"] li {
+        color: #334155 !important;
+    }
+
+    section[data-testid="stMain"] label {
+        color: #1e293b !important;
+    }
+
+    section[data-testid="stMain"] [data-testid="stWidgetLabel"] p,
+    section[data-testid="stMain"] [data-testid="stWidgetLabel"] span {
+        color: #1e293b !important;
+    }
+
+    /* =====================================================
+       INPUT BOXES - KEEP WHITE TEXT ON DARK CONTROLS
+       ===================================================== */
+
+    section[data-testid="stMain"] input,
+    section[data-testid="stMain"] textarea {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stMain"] input::placeholder,
+    section[data-testid="stMain"] textarea::placeholder {
+        color: #cbd5e1 !important;
+    }
+
+    section[data-testid="stMain"] [data-baseweb="input"] {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stMain"] [data-baseweb="input"] input {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stMain"] [data-baseweb="select"] {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stMain"] [data-baseweb="select"] * {
+        color: #ffffff !important;
+    }
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    section[data-testid="stMain"] button {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stMain"] button p,
+    section[data-testid="stMain"] button span {
+        color: #ffffff !important;
+    }
+
+    /* =====================================================
+       CUSTOM CARDS
+       ===================================================== */
 
     .hero {
         background: linear-gradient(135deg,#071a3d 0%,#0d47a1 58%,#12a8e8 100%);
-        border-radius:24px; padding:34px 38px; color:white;
-        box-shadow:0 12px 35px rgba(7,26,61,.18); margin-bottom:22px;
+        border-radius: 24px;
+        padding: 34px 38px;
+        color: white;
+        box-shadow: 0 12px 35px rgba(7,26,61,.18);
+        margin-bottom: 22px;
     }
-    .hero-title { font-size:40px; font-weight:850; letter-spacing:-1px; }
-    .hero-subtitle { color:#dff5ff; font-size:17px; margin-top:6px; }
+
+    .hero-title {
+        font-size: 40px;
+        font-weight: 850;
+        letter-spacing: -1px;
+        color: white !important;
+    }
+
+    .hero-subtitle {
+        color: #dff5ff !important;
+        font-size: 17px;
+        margin-top: 6px;
+    }
+
     .pill {
-        display:inline-block; padding:7px 12px; border-radius:999px;
-        background:rgba(255,255,255,.14); color:white; font-size:12px;
-        margin-top:16px; border:1px solid rgba(255,255,255,.2);
+        display: inline-block;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,.14);
+        color: white !important;
+        font-size: 12px;
+        margin-top: 16px;
+        border: 1px solid rgba(255,255,255,.2);
     }
+
     .metric-card {
-        background:white; border:1px solid #e2e8f0; border-radius:17px;
-        padding:20px; min-height:118px;
-        box-shadow:0 5px 18px rgba(15,23,42,.06);
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 17px;
+        padding: 20px;
+        min-height: 118px;
+        box-shadow: 0 5px 18px rgba(15,23,42,.06);
     }
-    .metric-title { color:#64748b; font-size:13px; font-weight:700; }
-    .metric-value { color:#0b1f44; font-size:28px; font-weight:850; margin-top:7px; }
+
+    .metric-title {
+        color: #64748b !important;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .metric-value {
+        color: #0b1f44 !important;
+        font-size: 28px;
+        font-weight: 850;
+        margin-top: 7px;
+    }
+
     .feature-card {
-        background:white; border:1px solid #e2e8f0; border-radius:18px;
-        padding:23px; min-height:185px; box-shadow:0 4px 16px rgba(15,23,42,.05);
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 23px;
+        min-height: 185px;
+        box-shadow: 0 4px 16px rgba(15,23,42,.05);
     }
-    .feature-icon { font-size:30px; }
-    .feature-title { color:#102a56; font-size:19px; font-weight:800; margin-top:9px; }
-    .feature-text { color:#64748b; line-height:1.55; font-size:14px; }
+
+    .feature-icon {
+        font-size: 30px;
+    }
+
+    .feature-title {
+        color: #102a56 !important;
+        font-size: 19px;
+        font-weight: 800;
+        margin-top: 9px;
+    }
+
+    .feature-text {
+        color: #64748b !important;
+        line-height: 1.55;
+        font-size: 14px;
+    }
+
     .result-card {
-        background:white; border:1px solid #e2e8f0; border-radius:20px;
-        padding:25px; box-shadow:0 6px 22px rgba(15,23,42,.07);
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 6px 22px rgba(15,23,42,.07);
     }
-    .driver-positive { background:#ecfdf5; border-left:5px solid #10b981; padding:13px 15px; border-radius:10px; margin-bottom:9px; color:#14532d; }
-    .driver-neutral { background:#fffbeb; border-left:5px solid #f59e0b; padding:13px 15px; border-radius:10px; margin-bottom:9px; color:#78350f; }
-    .driver-negative { background:#fef2f2; border-left:5px solid #ef4444; padding:13px 15px; border-radius:10px; margin-bottom:9px; color:#7f1d1d; }
-    .info-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:13px; padding:16px; color:#163b73; }
-    .section-label { color:#2563eb; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
-    .decision-banner { border-radius:16px; padding:18px 20px; margin:10px 0 18px; font-weight:800; font-size:20px; }
-    .footer { text-align:center; color:#64748b; padding:30px; font-size:13px; }
+
+    .driver-positive {
+        background: #ecfdf5;
+        border-left: 5px solid #10b981;
+        padding: 13px 15px;
+        border-radius: 10px;
+        margin-bottom: 9px;
+        color: #14532d !important;
+    }
+
+    .driver-neutral {
+        background: #fffbeb;
+        border-left: 5px solid #f59e0b;
+        padding: 13px 15px;
+        border-radius: 10px;
+        margin-bottom: 9px;
+        color: #78350f !important;
+    }
+
+    .driver-negative {
+        background: #fef2f2;
+        border-left: 5px solid #ef4444;
+        padding: 13px 15px;
+        border-radius: 10px;
+        margin-bottom: 9px;
+        color: #7f1d1d !important;
+    }
+
+    .info-box {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 13px;
+        padding: 16px;
+        color: #163b73 !important;
+    }
+
+    .section-label {
+        color: #2563eb !important;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .decision-banner {
+        border-radius: 16px;
+        padding: 18px 20px;
+        margin: 10px 0 18px;
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        color: #64748b !important;
+        padding: 30px;
+        font-size: 13px;
+    }
+
+    /* Streamlit metric widgets */
     [data-testid="stMetric"] {
-        background:white; border:1px solid #e2e8f0; padding:12px 15px;
-        border-radius:14px; box-shadow:0 3px 12px rgba(15,23,42,.04);
+        background: white;
+        border: 1px solid #e2e8f0;
+        padding: 12px 15px;
+        border-radius: 14px;
+        box-shadow: 0 3px 12px rgba(15,23,42,.04);
     }
+
+    [data-testid="stMetricLabel"] {
+        color: #64748b !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #0b1f44 !important;
+    }
+
+    /* Keep markdown text inside custom light cards readable */
+    .metric-card *,
+    .feature-card *,
+    .result-card *,
+    .info-box *,
+    .driver-positive *,
+    .driver-neutral *,
+    .driver-negative *,
+    .footer * {
+        color: inherit;
+    }
+
+    .metric-card .metric-title {
+        color: #64748b !important;
+    }
+
+    .metric-card .metric-value {
+        color: #0b1f44 !important;
+    }
+
+    .feature-card .feature-title {
+        color: #102a56 !important;
+    }
+
+    .feature-card .feature-text {
+        color: #64748b !important;
+    }
+
+    .info-box {
+        color: #163b73 !important;
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
